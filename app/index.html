@@ -24,43 +24,64 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <section class="chat_room container-fluid">
+            <div class="row appHolder">
+                <div class="col-xs-7 message_area">
+                    <div class="message_holder">
 
-        <div class="container">
-            <div class="header">
-                <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <h3 class="text-muted">fantasyChat</h3>
-            </div>
+                    </div>
+                    <div class="message_input">
+                        <form action="">
+                            <input type="text" id="message">
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xs-5 info_area">
+                    <div class="info_general">
+                        <h1>ChatPG</h1>
+                    </div>
+                    <div class="info_specific">
+                        <div class="chat_title_area">
+                            <h3 class="chat_title">Title</h3>
+                            <h3 class="chat_fandom">Fandom</h3>
+                            <h3 class="chat_setting">Current Setting</h3>
+                        </div>
+                        <div class="tab_area">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#online" role="tab" data-toggle="tab">Online</a></li>
+                                <li role="presentation"><a href="#cast" role="tab" data-toggle="tab">Cast</a></li>
+                                <li role="presentation"><a href="#story" role="tab" data-toggle="tab">Story so far</a></li>
+                                <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+                            </ul>
 
-            <div class="jumbotron">
-                <h1>'Allo, 'Allo!</h1>
-                <p class="lead">Always a pleasure scaffolding your apps.</p>
-                <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-            </div>
-
-            <div class="row marketing">
-                <div class="col-lg-6">
-                    <h4>HTML5 Boilerplate</h4>
-                    <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-                    <h4>Sass</h4>
-                    <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-
-                    <h4>Bootstrap</h4>
-                    <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-                    <h4>Modernizr</h4>
-                    <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="online">
+                                    <div class="online_current_num">
+                                        <h4 class="players_online">Players: <span>10</span></h4>
+                                        <h4 class="watchers_online">Watchers: <span>50</span></h4>
+                                    </div>
+                                    <div class="online_expand">
+                                        <div class="online_player">
+                                            <div class="player_photo"></div>
+                                            <div class="player_name">
+                                                <h5>PlayerName</h5>
+                                                <h6>Played by: Username</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="cast">...</div>
+                                <div role="tabpanel" class="tab-pane" id="story">...</div>
+                                <div role="tabpanel" class="tab-pane" id="settings">...</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="footer">
-                <p>♥ from the Yeoman team</p>
-            </div>
-        </div>
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
