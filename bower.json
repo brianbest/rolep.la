@@ -1,10 +1,7 @@
 {
-  "name": "fantasychat",
-  "private": true,
+  "name": "zf5_project",
   "dependencies": {
-    "bootstrap-sass-official": "~3.1.1",
-    "modernizr": "~2.6.2",
-    "jquery": "~1.11.0"
-  },
-  "devDependencies": {}
+    "foundation": "zurb/bower-foundation",
+    "font-awesome": "~4.2.0" 
+  }
 }

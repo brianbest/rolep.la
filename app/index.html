@@ -1,121 +1,152 @@
 <!doctype html>
-<html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <title>fantasyChat</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<html class="no-js" lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation project</title>
+    <!-- build:css css/libraries.min.css -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css css/app.min.css -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app_override.css">
+    <!-- endbuild -->
+    <!-- build:js js/vendor/modernizr.min.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
 
-        <!-- build:css styles/vendor.css -->
-        <!-- bower:css -->
-        <!-- endbower -->
-        <!-- endbuild -->
+  <section class="chat_room">
+      <div class="appHolder">
+          <div class="small-8 columns message_area">
+              <div class="message_holder">
 
-        <!-- build:css styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
+              </div>
+              <div class="message_input">
+                  <form action="">
+                      <input type="text" id="message">
+                  </form>
+              </div>
+          </div>
+          <div class="small-4 columns info_area">
+              <div class="info_general">
+                  <h1>ChatPG</h1>
+              </div>
+              <div class="info_specific">
+                  <div class="chat_title_area">
+                      <h3 class="chat_title">Title</h3>
+                      <h3 class="chat_fandom">Fandom</h3>
+                      <h3 class="chat_setting">Current Setting</h3>
+                  </div>
+                  <div class="tab_area">
+                      <dl class="tabs" data-tab>
+                          <dd class="active"><a href="#online">Tab 1</a></dd>
+                          <dd><a href="#cast">Tab 2</a></dd>
+                          <dd><a href="#story">Tab 3</a></dd>
+                          <dd><a href="#settings">Tab 4</a></dd>
+                      </dl>
 
-        <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="bower_components/modernizr/modernizr.js"></script>
-        <!-- endbuild -->
-    </head>
-    <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <section class="chat_room container-fluid">
-            <div class="row appHolder">
-                <div class="col-xs-7 message_area">
-                    <div class="message_holder">
+                      <!-- Tab panes -->
+                      <div class="tabs-content">
+                          <div class="content active online_tab" id="online">
+                              <div class="online_current_num">
+                                  <h4 class="players_online">Players: <span>10</span></h4>
+                                  <h4 class="watchers_online">Watchers: <span>50</span></h4>
+                              </div>
+                              <div class="online_expand">
+                                  <div class="online_player">
+                                      <div class="player_photo"></div>
+                                      <div class="player_name">
+                                          <h3>PlayerName</h3>
+                                          <h5>Played by: Username</h5>
+                                      </div>
+                                  </div>
+                                  <div class="online_player">
+                                      <div class="player_photo"></div>
+                                      <div class="player_name">
+                                          <h3>PlayerName</h3>
+                                          <h5>Played by: Username</h5>
+                                      </div>
+                                  </div>
+                                  <div class="online_player">
+                                      <div class="player_photo"></div>
+                                      <div class="player_name">
+                                          <h3>PlayerName</h3>
+                                          <h5>Played by: Username</h5>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!--Cast Tab-->
+                          <div  class="content cast_tab" id="cast">
+                              <div class="cast_player">
+                                  <div class="cast_basic_info">
+                                      <div class="player_photo"></div>
+                                      <div class="player_name">
+                                          <h3>PlayerName</h3>
+                                          <h5>Age: 99</h5><h5>Gender: ??</h5>
+                                      </div>
+                                  </div>
+                                  <div class="cast_info_expand">
+                                      <h4>bio:</h4>
+                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis libero dapibus, pulvinar odio non, posuere neque. Praesent ac dui elementum, tristique justo quis, dapibus libero. Etiam tristique mauris eget quam porttitor faucibus. Duis non nibh vel orci venenatis rhoncus id id metus. Nunc eu velit vulputate, lobortis leo eget, auctor purus. Quisque id placerat velit. Etiam viverra mollis nunc. Ut rhoncus est non ex dapibus elementum. Nunc ultrices gravida nibh, ac ultricies erat fringilla ac. Sed vehicula ante nec consectetur dictum. Curabitur id fermentum odio. Donec vel tellus id augue viverra tempus.</p>
+                                  </div>
 
-                    </div>
-                    <div class="message_input">
-                        <form action="">
-                            <input type="text" id="message">
-                        </form>
-                    </div>
-                </div>
-                <div class="col-xs-5 info_area">
-                    <div class="info_general">
-                        <h1>ChatPG</h1>
-                    </div>
-                    <div class="info_specific">
-                        <div class="chat_title_area">
-                            <h3 class="chat_title">Title</h3>
-                            <h3 class="chat_fandom">Fandom</h3>
-                            <h3 class="chat_setting">Current Setting</h3>
-                        </div>
-                        <div class="tab_area">
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active"><a href="#online" role="tab" data-toggle="tab">Online</a></li>
-                                <li role="presentation"><a href="#cast" role="tab" data-toggle="tab">Cast</a></li>
-                                <li role="presentation"><a href="#story" role="tab" data-toggle="tab">Story so far</a></li>
-                                <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
-                            </ul>
+                              </div>
+                          </div>
+                          <!--Story Tab-->
+                          <div class="content" id="story">
+                              <div class="chapter">
+                                  <h2>Chapter 1</h2>
+                              </div>
+                              <div class="chapter">
+                                  <h2>Chapter 2</h2>
+                              </div>
+                              <div class="chapter">
+                                  <h2>Chapter 3</h2>
+                              </div>
+                          </div>
+                          <!--Settings tab-->
+                          <div  class="content" id="settings">
 
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active" id="online">
-                                    <div class="online_current_num">
-                                        <h4 class="players_online">Players: <span>10</span></h4>
-                                        <h4 class="watchers_online">Watchers: <span>50</span></h4>
-                                    </div>
-                                    <div class="online_expand">
-                                        <div class="online_player">
-                                            <div class="player_photo"></div>
-                                            <div class="player_name">
-                                                <h5>PlayerName</h5>
-                                                <h6>Played by: Username</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div role="tabpanel" class="tab-pane" id="cast">...</div>
-                                <div role="tabpanel" class="tab-pane" id="story">...</div>
-                                <div role="tabpanel" class="tab-pane" id="settings">...</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
 
-
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-
-        <!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="bower_components/jquery/dist/jquery.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- build:js scripts/plugins.js -->
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
-        <!-- endbuild -->
-
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
-</body>
+    <!-- build:js js/vendor/libraries.min.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js js/vendor/foundation.min.js -->
+    <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/app.min.js -->
+    <script src="js/app.js"></script>
+    <!-- endbuild -->
+  </body>
 </html>
