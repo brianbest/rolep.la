@@ -6324,6 +6324,12 @@ th.hide-for-touch {
       width: 45%;
       text-align: center; }
 
+.tabs {
+  border-bottom: 1px #000000 solid; }
+
+.tabs-content .content {
+  padding: 0; }
+
 .option_list {
   border-bottom: 1px #000 solid; }
 
@@ -6355,7 +6361,8 @@ th.hide-for-touch {
     clear: both; }
 
 .cast_tab .cast_player {
-  border-bottom: 1px #000000 solid; }
+  border-bottom: 1px #000000 solid;
+  cursor: hand; }
   .cast_tab .cast_player .cast_basic_info {
     display: block;
     overflow: auto; }
@@ -6378,3 +6385,5 @@ th.hide-for-touch {
       margin: 0 0.5rem; }
   .cast_tab .cast_player .cast_info_expand {
     display: none; }
+.cast_tab .expand_bio .cast_info_expand {
+  display: block; }

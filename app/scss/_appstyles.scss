@@ -49,6 +49,16 @@
 
 
 //Tabed areas
+.tabs{
+    border-bottom: 1px #000000 solid;
+}
+
+.tabs-content{
+    .content{
+        padding:0;
+    }
+}
+
 .option_list{border-bottom: 1px #000 solid;}
 
 .online_tab{
@@ -73,6 +83,7 @@
 .cast_tab{
     .cast_player {
         border-bottom: 1px #000000 solid;
+        cursor: hand;
         .cast_basic_info {
             display: block;
             overflow: auto;
@@ -102,6 +113,11 @@
             display: none;
         }
     }
+   .expand_bio{
+       .cast_info_expand {
+           display: block;
+       }
+   }
 
 
 }

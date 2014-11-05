@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation project</title>
+    <title>Role Play</title>
     <!-- build:css css/libraries.min.css -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <!-- bower:css -->
@@ -16,6 +16,8 @@
     <!-- build:js js/vendor/modernizr.min.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+      <script src="bower_components/platform/platform.js"></script>
+      <script src="bower_components/polymer/polymer.js"></script>
   </head>
   <body>
 
@@ -94,7 +96,19 @@
                                       <h4>bio:</h4>
                                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis libero dapibus, pulvinar odio non, posuere neque. Praesent ac dui elementum, tristique justo quis, dapibus libero. Etiam tristique mauris eget quam porttitor faucibus. Duis non nibh vel orci venenatis rhoncus id id metus. Nunc eu velit vulputate, lobortis leo eget, auctor purus. Quisque id placerat velit. Etiam viverra mollis nunc. Ut rhoncus est non ex dapibus elementum. Nunc ultrices gravida nibh, ac ultricies erat fringilla ac. Sed vehicula ante nec consectetur dictum. Curabitur id fermentum odio. Donec vel tellus id augue viverra tempus.</p>
                                   </div>
-
+                              </div>
+                              <div class="cast_player">
+                                  <div class="cast_basic_info">
+                                      <div class="player_photo"></div>
+                                      <div class="player_name">
+                                          <h3>PlayerName</h3>
+                                          <h5>Age: 99</h5><h5>Gender: ??</h5>
+                                      </div>
+                                  </div>
+                                  <div class="cast_info_expand">
+                                      <h4>bio:</h4>
+                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis libero dapibus, pulvinar odio non, posuere neque. Praesent ac dui elementum, tristique justo quis, dapibus libero. Etiam tristique mauris eget quam porttitor faucibus. Duis non nibh vel orci venenatis rhoncus id id metus. Nunc eu velit vulputate, lobortis leo eget, auctor purus. Quisque id placerat velit. Etiam viverra mollis nunc. Ut rhoncus est non ex dapibus elementum. Nunc ultrices gravida nibh, ac ultricies erat fringilla ac. Sed vehicula ante nec consectetur dictum. Curabitur id fermentum odio. Donec vel tellus id augue viverra tempus.</p>
+                                  </div>
                               </div>
                           </div>
                           <!--Story Tab-->
@@ -128,24 +142,25 @@
     <!-- endbuild -->
     <!-- build:js js/vendor/foundation.min.js -->
     <script src="bower_components/foundation/js/foundation/foundation.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
+    <!--<script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>-->
+    <!--<script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>-->
+    <!--<script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>-->
+    <!--<script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script>-->
+    <!--<script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>-->
+    <!--<script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>-->
+    <!--<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>-->
+    <!--<script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>-->
+    <!--<script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script>-->
+    <!--<script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>-->
+    <!--<script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>-->
+    <!--<script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>-->
+    <!--<script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>-->
+    <!--<script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>-->
+    <!--<script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>-->
+    <!--<script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>-->
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->
+  <script src="/socket.io/socket.io.js"></script>
     <script src="js/app.js"></script>
     <!-- endbuild -->
   </body>
