@@ -10,7 +10,8 @@
     border-right:1px #000000 solid ;
 
     .message_holder{
-        height: 90%;
+        height: 500px;
+        overflow: scroll;
     }
     .message_input{
         height: 10%;

@@ -17,7 +17,8 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
       <script src="bower_components/platform/platform.js"></script>
-      <script src="bower_components/polymer/polymer.js"></script>
+      <link rel="import" src="bower_components/polymer/polymer.html">
+      <link rel="import" href="components/rph-msg.html">
   </head>
   <body>
 
@@ -25,7 +26,7 @@
       <div class="appHolder">
           <div class="small-8 columns message_area">
               <div class="message_holder">
-
+                <rph-msg usrIcon="https://1.gravatar.com/avatar/767fc9c115a1b989744c755db47feb60?s=200&r=pg&d=mm">Stuff</rph-msg>
               </div>
               <div class="message_input">
                   <form action="">
@@ -138,6 +139,7 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="bower_components/polymer/polymer.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/vendor/foundation.min.js -->
@@ -161,6 +163,7 @@
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->
   <script src="/socket.io/socket.io.js"></script>
+
     <script src="js/app.js"></script>
     <!-- endbuild -->
   </body>
