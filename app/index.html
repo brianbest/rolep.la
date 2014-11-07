@@ -17,8 +17,11 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
       <script src="bower_components/platform/platform.js"></script>
-      <link rel="import" src="bower_components/polymer/polymer.html">
+      <link rel="import" href="bower_components/polymer/polymer.html">
+      <link rel="import" href="bower_components/core-overlay/core-overlay.html">
       <link rel="import" href="components/rph-msg.html">
+      <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+      <link rel="import" href="bower_components/paper-shadow/paper-shadow.html">
   </head>
   <body>
 
@@ -26,120 +29,143 @@
       <div class="appHolder">
           <div class="small-8 columns message_area">
               <div class="message_holder">
-                <rph-msg usrIcon="https://1.gravatar.com/avatar/767fc9c115a1b989744c755db47feb60?s=200&r=pg&d=mm">Stuff</rph-msg>
+
+                  <rph-msg icon="http://www.theblaze.com/wp-content/uploads/2011/10/Facebook-no-profile-picture-icon-620x389.jpg">
+                      Stuff
+                  </rph-msg>
+
               </div>
               <div class="message_input">
-                  <form action="">
+                  <form id="msg_form" action="">
                       <input type="text" id="message">
                   </form>
               </div>
           </div>
-          <div class="small-4 columns info_area">
-              <div class="info_general">
-                  <h1>ChatPG</h1>
-              </div>
-              <div class="info_specific">
-                  <div class="chat_title_area">
-                      <h3 class="chat_title">Title</h3>
-                      <h3 class="chat_fandom">Fandom</h3>
-                      <h3 class="chat_setting">Current Setting</h3>
+
+          <div class="small-4 columns info_area card">
+                  <paper-shadow  z="1">
+                  <div class="info_general">
+                      <h1>ChatPG</h1>
                   </div>
-                  <div class="tab_area">
-                      <dl class="tabs" data-tab>
-                          <dd class="active"><a href="#online">Tab 1</a></dd>
-                          <dd><a href="#cast">Tab 2</a></dd>
-                          <dd><a href="#story">Tab 3</a></dd>
-                          <dd><a href="#settings">Tab 4</a></dd>
-                      </dl>
+                  <div class="info_specific">
+                      <div class="chat_title_area">
+                          <h3 class="chat_title">Title</h3>
+                          <h3 class="chat_fandom">Fandom</h3>
+                          <h3 class="chat_setting">Current Setting</h3>
+                      </div>
+                      <div class="tab_area">
+                          <!--<dl class="tabs" data-tab>-->
+                              <!--<dd class="active"><a href="#online">Tab 1</a></dd>-->
+                              <!--<dd><a href="#cast">Tab 2</a></dd>-->
+                              <!--<dd><a href="#story">Tab 3</a></dd>-->
+                              <!--<dd><a href="#settings">Tab 4</a></dd>-->
+                          <!--</dl>-->
 
-                      <!-- Tab panes -->
-                      <div class="tabs-content">
-                          <div class="content active online_tab" id="online">
-                              <div class="online_current_num">
-                                  <h4 class="players_online">Players: <span>10</span></h4>
-                                  <h4 class="watchers_online">Watchers: <span>50</span></h4>
-                              </div>
-                              <div class="online_expand">
-                                  <div class="online_player">
-                                      <div class="player_photo"></div>
-                                      <div class="player_name">
-                                          <h3>PlayerName</h3>
-                                          <h5>Played by: Username</h5>
-                                      </div>
-                                  </div>
-                                  <div class="online_player">
-                                      <div class="player_photo"></div>
-                                      <div class="player_name">
-                                          <h3>PlayerName</h3>
-                                          <h5>Played by: Username</h5>
-                                      </div>
-                                  </div>
-                                  <div class="online_player">
-                                      <div class="player_photo"></div>
-                                      <div class="player_name">
-                                          <h3>PlayerName</h3>
-                                          <h5>Played by: Username</h5>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <!--Cast Tab-->
-                          <div  class="content cast_tab" id="cast">
-                              <div class="cast_player">
-                                  <div class="cast_basic_info">
-                                      <div class="player_photo"></div>
-                                      <div class="player_name">
-                                          <h3>PlayerName</h3>
-                                          <h5>Age: 99</h5><h5>Gender: ??</h5>
-                                      </div>
-                                  </div>
-                                  <div class="cast_info_expand">
-                                      <h4>bio:</h4>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis libero dapibus, pulvinar odio non, posuere neque. Praesent ac dui elementum, tristique justo quis, dapibus libero. Etiam tristique mauris eget quam porttitor faucibus. Duis non nibh vel orci venenatis rhoncus id id metus. Nunc eu velit vulputate, lobortis leo eget, auctor purus. Quisque id placerat velit. Etiam viverra mollis nunc. Ut rhoncus est non ex dapibus elementum. Nunc ultrices gravida nibh, ac ultricies erat fringilla ac. Sed vehicula ante nec consectetur dictum. Curabitur id fermentum odio. Donec vel tellus id augue viverra tempus.</p>
-                                  </div>
-                              </div>
-                              <div class="cast_player">
-                                  <div class="cast_basic_info">
-                                      <div class="player_photo"></div>
-                                      <div class="player_name">
-                                          <h3>PlayerName</h3>
-                                          <h5>Age: 99</h5><h5>Gender: ??</h5>
-                                      </div>
-                                  </div>
-                                  <div class="cast_info_expand">
-                                      <h4>bio:</h4>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis libero dapibus, pulvinar odio non, posuere neque. Praesent ac dui elementum, tristique justo quis, dapibus libero. Etiam tristique mauris eget quam porttitor faucibus. Duis non nibh vel orci venenatis rhoncus id id metus. Nunc eu velit vulputate, lobortis leo eget, auctor purus. Quisque id placerat velit. Etiam viverra mollis nunc. Ut rhoncus est non ex dapibus elementum. Nunc ultrices gravida nibh, ac ultricies erat fringilla ac. Sed vehicula ante nec consectetur dictum. Curabitur id fermentum odio. Donec vel tellus id augue viverra tempus.</p>
-                                  </div>
-                              </div>
-                          </div>
-                          <!--Story Tab-->
-                          <div class="content" id="story">
-                              <div class="chapter">
-                                  <h2>Chapter 1</h2>
-                              </div>
-                              <div class="chapter">
-                                  <h2>Chapter 2</h2>
-                              </div>
-                              <div class="chapter">
-                                  <h2>Chapter 3</h2>
-                              </div>
-                          </div>
-                          <!--Settings tab-->
-                          <div  class="content" id="settings">
+                          <paper-tabs selected="online">
+                              <paper-tab name="online">Online</paper-tab>
+                              <paper-tab name="cast">Cast</paper-tab>
+                              <paper-tab name="story">The Story So Far</paper-tab>
+                              <paper-tab name="setting">Settings</paper-tab>
+                          </paper-tabs>
 
+
+
+                          <!-- Tab panes -->
+                          <div class="tabs-content">
+                              <div class="content active online_tab" id="online">
+
+
+                                  <div class="online_current_num">
+                                      <h4 class="players_online">Players: <span>10</span></h4>
+                                      <h4 class="watchers_online">Watchers: <span>50</span></h4>
+                                  </div>
+
+
+                                  <div class="online_expand">
+
+                                      <div class="online_player card">
+                                          <div class="player_photo"></div>
+                                          <div class="player_name">
+                                              <h3>PlayerName</h3>
+                                              <h5>Played by: Username</h5>
+                                          </div>
+                                      </div>
+
+                                  </div>
+                              </div>
+                              <!--Cast Tab-->
+                              <div  class="content cast_tab" id="cast">
+                                  <div class="cast_player">
+                                      <div class="cast_basic_info">
+                                          <div class="player_photo"></div>
+                                          <div class="player_name">
+                                              <h3>PlayerName</h3>
+                                              <h5>Age: 99</h5><h5>Gender: ??</h5>
+                                          </div>
+                                      </div>
+                                      <div class="cast_info_expand">
+                                          <h4>bio:</h4>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis libero dapibus, pulvinar odio non, posuere neque. Praesent ac dui elementum, tristique justo quis, dapibus libero. Etiam tristique mauris eget quam porttitor faucibus. Duis non nibh vel orci venenatis rhoncus id id metus. Nunc eu velit vulputate, lobortis leo eget, auctor purus. Quisque id placerat velit. Etiam viverra mollis nunc. Ut rhoncus est non ex dapibus elementum. Nunc ultrices gravida nibh, ac ultricies erat fringilla ac. Sed vehicula ante nec consectetur dictum. Curabitur id fermentum odio. Donec vel tellus id augue viverra tempus.</p>
+                                      </div>
+                                  </div>
+                                  <div class="cast_player">
+                                      <div class="cast_basic_info">
+                                          <div class="player_photo"></div>
+                                          <div class="player_name">
+                                              <h3>PlayerName</h3>
+                                              <h5>Age: 99</h5><h5>Gender: ??</h5>
+                                          </div>
+                                      </div>
+                                      <div class="cast_info_expand">
+                                          <h4>bio:</h4>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis libero dapibus, pulvinar odio non, posuere neque. Praesent ac dui elementum, tristique justo quis, dapibus libero. Etiam tristique mauris eget quam porttitor faucibus. Duis non nibh vel orci venenatis rhoncus id id metus. Nunc eu velit vulputate, lobortis leo eget, auctor purus. Quisque id placerat velit. Etiam viverra mollis nunc. Ut rhoncus est non ex dapibus elementum. Nunc ultrices gravida nibh, ac ultricies erat fringilla ac. Sed vehicula ante nec consectetur dictum. Curabitur id fermentum odio. Donec vel tellus id augue viverra tempus.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!--Story Tab-->
+                              <div class="content" id="story">
+                                  <div class="chapter">
+                                      <h2>Chapter 1</h2>
+                                  </div>
+                                  <div class="chapter">
+                                      <h2>Chapter 2</h2>
+                                  </div>
+                                  <div class="chapter">
+                                      <h2>Chapter 3</h2>
+                                  </div>
+                              </div>
+                              <!--Settings tab-->
+                              <div  class="content" id="settings">
+
+                              </div>
                           </div>
                       </div>
                   </div>
+                  </paper-shadow>
               </div>
-          </div>
       </div>
   </section>
+  <core-overlay backdrop autoCloseDisabled opened style="background-color: #fff;width: 25rem;padding:3rem;">
+      <h2>Welcome!</h2>
+      <form id="create_char" action="">
+          <input type="text" id="user_name" placeholder="user name">
+          <input type="text" id="char_name" placeholder="character name">
+          <input type="text" id="age" placeholder="age">
+          <input type="text" id="gender" placeholder="gender">
+          <textarea id="bio" placeholder="bio"></textarea>
+          <input type="submit">
+      </form>
+  </core-overlay>
+
+
+  <script>
+
+  </script>
 
     <!-- build:js js/vendor/libraries.min.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/fastclick/lib/fastclick.js"></script>
-    <script src="bower_components/polymer/polymer.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/vendor/foundation.min.js -->

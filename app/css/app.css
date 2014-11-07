@@ -6290,10 +6290,8 @@ th.hide-for-touch {
 .message_area {
   height: 100vh;
   padding-left: 0;
-  padding-right: 0;
-  border-right: 1px #000000 solid; }
+  padding-right: 0; }
   .message_area .message_holder {
-    height: 500px;
     overflow: scroll; }
   .message_area .message_input {
     height: 10%;
