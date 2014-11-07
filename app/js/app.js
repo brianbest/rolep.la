@@ -45,6 +45,10 @@
         console.log(characters);
 
     });
+    socket.on('characters stats', function(characters){
+        console.log(characters);
+
+    });
 
 //----------------------------
 
