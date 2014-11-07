@@ -1,3 +1,5 @@
+
+
 (function() {
 
 	//'use strict';
@@ -38,6 +40,12 @@
         $('.message_holder').scrollTop = $('.message_holder').scrollHeight;
         $('.message_holder').append($('<rph-msg>').text(msg));
     });
+
+    socket.on('characters', function(characters){
+        console.log(characters);
+
+    });
+
 //----------------------------
 
 
